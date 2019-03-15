@@ -17,8 +17,8 @@ fi
 #prompt the user if the command really want to be executed
 read -p "Are you sure you want to resize all folder.jpg file on $1? (y/n)" -n 1 
 case "$REPLY" in
-  y|Y ) printf "\nReizing all folder.jpg\n"
-    find "$@" -iname 'folder.jpg' -execdir mogrify -resize 50% {} \;
+  y|Y ) printf "\nResizing all folder.jpg\n"
+    find "$@" -iname 'folder.jpg' -execdir mogrify -resize 240x235 {} \;
     ;;
   * )   printf "\nExiting code\n"
     ;;
